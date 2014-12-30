@@ -1,0 +1,66 @@
+Install nodejs.org
+
+  $ node --version
+
+  $ node hello.js
+http://localhost:3000
+
+Stop (ctrl-c) and restart node after making changes to hello.js
+     or
+install nodemon (nodemon.io)
+  $ npm install -g nodemon
+and run
+  $ nodemon hello.js
+to automatically pick up changes saved to hello.js.
+
+Then refresh the browser http://localhost:3000
+
+npm (Node Package Manager)
+npmjs.com
+
+  $ npm help
+
+  $ npm init
+creates package.json
+
+{
+  "name": "SampleApp",
+  "version": "1.0.0",
+  "description": "What the app does",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+  $ npm install gulp --save
+     or
+  $ npm i -S gulp
+
+installs gulp as a dependency (see package.json):
+
+{
+  "name": "SampleApp",
+  "version": "1.0.0",
+  "description": "What the app does",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jph",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.8.10"
+  }
+}
+
+and see node_modules folder that now contains the gulp folder.
+
+add node_modules to .gitignore file, to prevent git from saving in repository. 
+
+clone repository elsewhere, and run
+  $ npm install
+to install dependecies listed in package.json
+
